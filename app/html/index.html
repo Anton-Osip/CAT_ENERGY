@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAT ENERGY</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-
-<body>
-    <svg>
+  <body>
+    <!-- <svg>
         <use xlink:href="img/icons/sprite.svg#clock"></use>
-    </svg>
-    <svg>
-        <use xlink:href="img/icons/sprite.svg#coin"></use>
-    </svg>
-    <svg>
-        <use xlink:href="img/icons/sprite.svg#clouds-fill"></use>
-    </svg>
-    <!-- пример подключения картинок, и html-блоков, удалить перед началом работы -->
-    <div class="test">
-        <!-- подключаем шапку -->
-        @@include('blocks/header.html')
-
-        <div class="test__content">
-            <img class="test__img" src="img/mentor.jpg" alt="mentor picture">
-            <div class="test__pic"></div>
+    </svg> -->
+    <header class="header header-no-js">
+        <div class="container">
+            <div class="header__container">
+                <div class="header__logo logo">
+                    <img src="../img/icons/logo-desktop.svg" alt="CAT ENERGY" class="logo__img logo__img--desktop">
+                    <img src="../img/icons/logo-tablet.svg" alt="CAT ENERGY" class="logo__img logo__img--tablet">
+                    <img src="../img/icons/logo-mobile.svg" alt="CAT ENERGY" class="logo__img logo__img--mobile">
+                    <img src="../img/icons/logo-text.svg" alt="CAT ENERGY" class="logo__text">
+                    <div class="logo__burger">
+                        <span class="logo__line"></span>
+                    </div>
+                </div>
+                <nav class="header__nav nav ">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link nav__link--active">главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">каталог продукции</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">подбор программы</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-
-        <!-- подключаем подвал -->
-        @@include('blocks/footer.html')
-
-    </div>
-
-
-    <!-- подключаем js -->
+    </header>
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>

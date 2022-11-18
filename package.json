@@ -42,5 +42,8 @@
   "editorconfig-cli": [
     "app/html/**/*.html",
     "app/scss/**/*.scss"
-  ]
+  ],
+  "dependencies": {
+    "scss-reset": "^1.2.2"
+  }
 }

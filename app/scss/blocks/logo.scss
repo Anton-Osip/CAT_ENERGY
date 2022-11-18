@@ -1,0 +1,173 @@
+.logo {
+  display: flex;
+  align-items: center;
+  // .logo__img
+
+  &__img {
+    margin-right: 15px;
+  }
+
+  .logo__img,
+  .logo__text {
+    transition: opacity 0.3s;
+  }
+  .logo__img:hover,
+  .logo__text:hover,
+  .logo__img:hover ~ .logo__text,
+  .logo__text:hover ~ .logo__img {
+    opacity: 0.8;
+  }
+  .logo__img:active,
+  .logo__text:active,
+  .logo__img:active ~ .logo__text,
+  .logo__text:active ~ .logo__img {
+    opacity: 0.6;
+  }
+  // .logo__img--desktop
+
+  &__img--desktop {
+    width: 70px;
+    height: 60px;
+  }
+
+  // .logo__img--tablet
+
+  &__img--tablet {
+    display: none;
+  }
+
+  // .logo__img--mobile
+
+  &__img--mobile {
+    display: none;
+  }
+
+  // .logo__text
+
+  &__text {
+    width: 118px;
+    height: 21px;
+  }
+
+  // .logo__burger
+
+  &__burger {
+    width: 24px;
+    height: 16px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .logo__line
+
+  &__line {
+    width: 24px;
+    height: 2px;
+    background-color: $black;
+    position: relative;
+    transition: transform 0.3s;
+    &:after,
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 24px;
+      height: 2px;
+      background-color: $black;
+    }
+    &:after {
+      top: -8px;
+    }
+    &::before {
+      bottom: -8px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .logo {
+    // .logo__img--desktop
+    &__img {
+      margin-right: 12px;
+    }
+    &__img--desktop {
+      display: none;
+    }
+
+    // .logo__img--tablet
+
+    &__img--tablet {
+      display: block;
+      width: 60px;
+      height: 50px;
+    }
+
+    // .logo__img--mobile
+
+    &__img--mobile {
+      display: none;
+    }
+
+    // .logo__text
+
+    &__text {
+      width: 101px;
+      height: 19px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .logo {
+    width: 100%;
+    justify-content: space-between;
+    // .logo__img
+
+    &__img {
+      margin-right: 0px;
+    }
+
+    // .logo__img--desktop
+
+    &__img--tablet {
+      display: none;
+    }
+
+    // .logo__img--mobile
+
+    &__img--mobile {
+      display: block;
+      width: 33px;
+      height: 38px;
+    }
+
+    // .logo__text
+
+    &__text {
+      width: 101px;
+      height: 18px;
+    }
+
+    // .logo__burger
+
+    &__burger {
+      display: flex;
+    }
+  }
+
+  .header--active .logo__line {
+    transition: transform 0.3s;
+    transform: rotate(135deg);
+    &:after {
+      top: 0px;
+      transform: rotate(90deg);
+    }
+    &::before {
+      display: none;
+    }
+  }
+  .header-no-js .logo__burger {
+    display: none;
+  }
+}

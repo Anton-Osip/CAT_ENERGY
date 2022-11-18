@@ -1,6 +1,11 @@
-@import 'variables'; //пишем переменные
-@import 'reset'; //сборс стилей
-@import 'fonts'; //подключаем шрифты (локально)
+@import "../../node_modules/scss-reset/_reset.scss";
+
+@import "variables";
+@import "fonts";
+@import "grid";
+@import "style";
 
 //подключаем БЭМ блоки
-@import 'blocks/test';
+@import "./blocks/header";
+@import "./blocks/logo";
+@import "./blocks/nav";
